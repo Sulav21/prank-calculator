@@ -1,0 +1,115 @@
+
+body{
+    /* background: linear-gradient(to right, green,purple); */
+  
+  background-color: rgba(0,0,0,0.6);
+  
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size: 2rem;
+}
+
+.mainparent{
+    width:400px;
+    background-color: rgba(255,255,255,0.299);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: -4px 4px 4px rgba(o,0,0,0.25);
+
+}
+
+.result{
+    border: 3px solid rgba(0,0,0,0.25);
+    padding:1rem;
+    margin-bottom:5px;
+    border-radius: 10px;
+    box-shadow: -4px 4px 4px rgba(0,0,0,0.25);
+    color:rgba(255,255,255,0.7);
+    font-weight:bolder;
+    display:flex;
+    justify-content: flex-end;
+    overflow:  hidden;
+}
+.top{
+color: aqua;
+text-align: center;
+margin-top: 0;
+}
+p{
+    font-size:1rem;
+}
+h3{
+    padding:0;
+}
+.items{
+    margin-top:1rem;
+    display:grid; 
+    grid-template-columns: repeat(4,1fr);
+    grid-gap:1rem;
+    grid-template-areas: 
+    " clear clean divide multi"
+    "seven eight nine minus"
+    "four five six plus"
+    "one two three equal" 
+    "dot zero zero equal";
+
+}
+
+.items>button{
+    background: rgba(255,255,255,0.205);
+    min-height:50px;
+    box-shadow: -4px 4px 4px rgba(o,0,0,0.25);
+    font-size: 1.5rem;
+    color:rgba(255,255,255,0.7);
+    font-weight:bolder;
+    border-radius:10%;
+}
+
+.items>button:hover{
+    cursor:pointer;
+    background-color: greenyellow;
+    color:black;
+}
+
+
+.clear{grid-area:clear;}
+.clean{grid-area: clean;}
+.divide{grid-area:divide ;}
+.multi{grid-area:multi ;}
+.plus{grid-area: plus;}
+.minus{grid-area:minus ;}
+.nine{grid-area:nine ;}
+.eight{grid-area:eight ;}
+.seven{grid-area: seven;}
+.six{grid-area:six ;}
+.five{grid-area: five;}
+.four{grid-area: four;}
+.three{grid-area: three;}
+.two{grid-area: two ;}
+.one{grid-area: one;}
+.zero{grid-area: zero;}
+.equal{grid-area: equal;}
+.dot{grid-area:dot;}
+
+.prank{
+    animation: shake 0.3s ease-in;
+}
+@keyframes shake{
+    0%{
+        transform: translateX(10px);
+    }
+
+    50%{
+        transform: translateX(-10px);
+    }
+
+    75%{
+        transform: translateX(10px);
+    }
+
+    100%{
+        transform: translateX(-10px);
+    }
+}
